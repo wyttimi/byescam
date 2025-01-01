@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #ff3366;
+  --primary-dark: #e61e4d;
+  --secondary: #ff6b6b;
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --glass: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  color: var(--foreground);
+  background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Modern Card Styles */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 51, 102, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(255, 51, 102, 0.1);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animated Background */
+@keyframes flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bg-flow {
+  background: linear-gradient(45deg, #fff5f5, #ffe5e5, #fff);
+  background-size: 200% 200%;
+  animation: flow 15s ease infinite;
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 51, 102, 0.2);
+}
+
+/* Blob Animation */
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+  filter: blur(40px);
+  background: linear-gradient(45deg, rgba(255, 51, 102, 0.3), rgba(255, 107, 107, 0.3));
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+/* Input Styles */
+.input-primary {
+  border: 2px solid rgba(255, 51, 102, 0.1);
+  transition: all 0.3s ease;
+}
+
+.input-primary:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(255, 51, 102, 0.1);
+}
+
+/* Card Hover Effects */
+.hover-card {
+  transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(255, 51, 102, 0.1);
+}
